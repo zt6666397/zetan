@@ -6,11 +6,12 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Button>Hello</Button>
+        <Button >Hello</Button>
         <Button btnType={ButtonType.Danger} size={ButtonSize.Large} disabled>Hello1111</Button>
         <Button btnType={ButtonType.Primary} size={ButtonSize.Small}>Hello1111111111</Button>
         <Button btnType={ButtonType.Default} size={ButtonSize.Small} disabled>Hello1111111111</Button>
         <Button btnType={ButtonType.Link} href="http://www.baidu.com" disabled>baidu Link</Button>
+        <Button btnType={ButtonType.Link} href="http://www.baidu.com">baidu Link</Button>
         <a
           className="App-link"
           href="https://reactjs.org"
