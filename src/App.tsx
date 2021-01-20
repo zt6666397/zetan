@@ -1,21 +1,29 @@
 import React from 'react';
-import Button, { ButtonType, ButtonSize } from './components/Button/button'
+// import Button, { ButtonType, ButtonSize } from './components/Button/button'
 import Menu from './components/Menu/menu'
 import MenuItem from './components/Menu/menuItem'
-
+import SubMenu from './components/Menu/subMenu'
 
 const App: React.FC = () => {
   // const WrappedDogShow = withLoader(DogShow, 'https://dog.ceo/api/breeds/image/random')
   return (
     <div className="App">
       <header className="App-header">
-        <Menu defaultIndex={0} onSelect={(index) => { alert(index) }}>
-          <MenuItem >
+        <Menu defaultIndex={'0'} onSelect={(index) => { alert(index) }} mode='vertical' defaultOpenSubMenus={['1']}>
+          <MenuItem>
             cool link
           </MenuItem>
-          <MenuItem disabled>
-            cool link1
+          <SubMenu title="dropdown">
+            <MenuItem >
+              cool link1
           </MenuItem>
+            <MenuItem >
+              cool link1
+          </MenuItem>
+            <MenuItem >
+              cool link1
+          </MenuItem>
+          </SubMenu>
           <MenuItem >
             cool link2
           </MenuItem>
@@ -23,14 +31,6 @@ const App: React.FC = () => {
             Hello
           </li>
         </Menu>
-
-
-        <Button >Hello</Button>
-        <Button btnType={ButtonType.Danger} size={ButtonSize.Large} disabled onClick={() => alert('111')}>Hello1111</Button>
-        <Button btnType={ButtonType.Primary} size={ButtonSize.Small}>Hello1111111111</Button>
-        <Button btnType={ButtonType.Default} size={ButtonSize.Small} disabled>Hello1111111111</Button>
-        <Button btnType={ButtonType.Link} href="http://www.baidu.com" disabled >baidu Link</Button>
-        <Button btnType={ButtonType.Link} href="http://www.baidu.com">baidu Link</Button>
         <a
           className="App-link"
           href="https://reactjs.org"
