@@ -57,12 +57,10 @@
 }
 
 .zetan-submenu {
-    opacity: 0;
-    display: none;
     list-style: none;
     padding-left: 0;
     white-space: nowrap;
-    transition: opacity 0.5s ease-in;
+    // transition: opacity 0.5s ease-in;
     .menu-item {
         padding: $menu-item-padding-y $menu-item-padding-x;
         cursor: pointer;
@@ -75,10 +73,7 @@
     }
 }
 
-.zetan-submenu.menu-opened {
-    display: block;
-    opacity: 1;
-}
+.zetan-submenu.menu-opened {}
 
 .menu-horizontal {
     >.menu-item {
