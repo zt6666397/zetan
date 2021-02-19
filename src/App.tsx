@@ -9,6 +9,7 @@ import SubMenu from './components/Menu/subMenu'
 import Icon from './components/Icon/icon'
 import Transition from './components/Transition/transition'
 import Button from './components/Button/button'
+import Input from './components/Input'
 library.add(fas)
 const App: React.FC = () => {
   const [show, setShow] = useState(false)
@@ -50,6 +51,7 @@ const App: React.FC = () => {
           {/* <FontAwesomeIcon icon={faCoffee} size='10x' /> */}
           <Button size='lg'>Click</Button>
         </Transition>
+        <Input icon='search' />
       </header>
     </div>
   );
